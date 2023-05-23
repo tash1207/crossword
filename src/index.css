@@ -11,8 +11,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cell {
+  border: 1px solid grey;
+}
+
+.cell.block {
+  background-color: black;
+}
+
+.cellLetter {
+  font-size: 20px;
+  margin-left: 16px;
+  margin-top: 12px;
+  position: absolute;
+}
+
+.cellNumber {
+  font-size: 12px;
+  margin-left: 2px;
+  position: absolute;
+}
+
 .clueBar {
   background-color: lightblue;
+  border: 2px solid grey;
   min-height: 40px;
   padding: 8px;
   text-align: center;
@@ -24,11 +46,12 @@ body {
 }
 
 .grid {
-  border: 1px solid steelblue;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   margin-top: 8px;
-  min-height: 200px;
-  min-width: 200px;
-  padding: 8px;
+  min-height: 240px;
+  min-width: 240px;
 }
 
 .playArea {
