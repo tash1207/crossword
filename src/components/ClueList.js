@@ -1,8 +1,10 @@
-const ClueList = ({ title }) => {
+const ClueList = ({ title, clues }) => {
   return (
     <div className="clueList">
       <div className="clueListTitle">{title}</div>
-      <div>1 Florida mascot</div>
+      {clues.map((clue, index) => (
+        <div className="clueListClue">{clue.number} {clue.text}</div>
+        ))}
     </div>
     )
 }

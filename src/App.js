@@ -39,6 +39,30 @@ function App() {
     Cell('tile', 'T'),
   ];
 
+  const Clue = (number, text) => {
+    return {
+      number,
+      text,
+    }
+  }
+
+  const acrossClues = [
+    Clue('1', 'Florida mascot'),
+    Clue('6', 'To speak formally'),
+    Clue('7', 'Not the worst'),
+    Clue('8', '[Clearing my throat]'),
+    Clue('10', 'Something to hang on the wall'),
+  ];
+
+  const downClues = [
+    Clue('1', 'Oldest Bluth brother'),
+    Clue('2', 'Blackpink in your ___'),
+    Clue('3', 'Author of this puzzle'),
+    Clue('4', 'Hand-holding sea creature'),
+    Clue('5', 'Common email abbr'),
+    Clue('9', '___ Washington, song by Local Natives on the LiS soundtrack'),
+  ];
+
   return (
     <>
       <header>
@@ -49,8 +73,8 @@ function App() {
           <ClueBar />
           <Grid cells={cells} />
         </div>
-        <ClueList title='Across' />
-        <ClueList title='Down' />
+        <ClueList title='Across' clues={acrossClues} />
+        <ClueList title='Down' clues={downClues} />
       </div>
     </>
   );
